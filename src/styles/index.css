@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  padding: 5%;
+  background-color: grey;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
+meme-button {
+  cursor: pointer;
+  font-style: italic;
+  padding: 10px;
+}

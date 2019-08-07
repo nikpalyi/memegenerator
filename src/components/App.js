@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../styles/index.css';
 
 class App extends Component {
   constructor() {
