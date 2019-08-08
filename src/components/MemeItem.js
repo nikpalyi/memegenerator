@@ -13,7 +13,7 @@ class MemeItem extends Component {
 
   postMeme() {
     console.log('this.props', this.props);
-    const { text0, text } = this.props;
+    const { text0, text1 } = this.props;
     const memeObj = {
       template_id: this.props.meme.id,
       text0,
