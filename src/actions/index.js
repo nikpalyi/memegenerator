@@ -1,4 +1,5 @@
 export const RECEIVE_MEMES = 'RECEIVE_MEMES';
+export const NEW_MEME = 'NEW_MEME';
 
 //regular actionCreator: receiving json data -> returning action object with type and actual data
 function receiveMemes(json) {
@@ -20,6 +21,13 @@ function fetchMemesJson() {
 export function fetchMemes() {
   return function(dispatch) {
     return fetchMemesJson().then(json => dispatch(receiveMemes(json)));
+  };
+}
+
+export function newMeme(meme) {
+  return {
+    type: NEW_MEME,
+    meme
   };
 }
 
