@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { newMeme } from '../actions'; //action creator function -> in order to use this, need to CONNECT to redux!
+import { createMeme } from '../actions'; //action creator function -> in order to use this, need to CONNECT to redux!
 
 class MemeItem extends Component {
   constructor() {
@@ -19,7 +19,7 @@ class MemeItem extends Component {
       text0,
       text1
     };
-    this.props.newMeme(memeObj);
+    this.props.createMeme(memeObj);
   }
 
   render() {
@@ -45,5 +45,5 @@ class MemeItem extends Component {
 
 export default connect(
   null,
-  { newMeme }
+  { createMeme }
 )(MemeItem);
