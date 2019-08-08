@@ -10,7 +10,9 @@ class App extends Component {
     super();
 
     this.state = {
-      memeLimit: 10
+      memeLimit: 10,
+      text0: '', //top text
+      text1: '' //bottom text
     };
   }
 
@@ -23,11 +25,18 @@ class App extends Component {
         </h4>
         <Form inline>
           <FormGroup>
-            <FormLabel>Top</FormLabel> <FormControl type='text' />
+            <FormLabel>Top</FormLabel>{' '}
+            <FormControl
+              type='text'
+              onChange={event => this.setState({ text0: event.target.value })}
+            />
           </FormGroup>{' '}
           <FormGroup>
-            <FormLabel>Bottom</FormLabel>
-            <FormControl type='text' />
+            <FormLabel>Bottom</FormLabel>{' '}
+            <FormControl
+              type='text'
+              onChange={event => this.setState({ text1: event.target.value })}
+            />
           </FormGroup>
         </Form>
         {this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
