@@ -1,4 +1,4 @@
-const username = 'nikolett_palyi';
-const password = 'palyi_test';
+const username = 'david_captioner';
+const password = 'captioner_test';
 
 export { username, password };
